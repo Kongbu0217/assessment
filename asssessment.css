@@ -1,0 +1,21 @@
+body {
+  background-color: #04a6eb8a;
+  color: #fdffff;
+  width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+button {
+  /* 内側の余白 */
+  padding: 5px 20px; 
+  background-color: #0c375d;
+  color: #fdffff;
+  border-style: none;
+  
+}
+
+
+input {
+  height: 25px;
+}
