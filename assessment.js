@@ -20,6 +20,26 @@ assessmentButton.addEventListener(
     const header = document.createElement('h3');  //h3タグの作成
     header.innerText = '診断結果';  //タグの内側のテキストを設定
     resultDivision.appendChild(header);  //divタグの子要素として追加
+    //headerDivision の作成
+    const headerDivision = document.createElement('div');
+    headerDivision.setAttribute('class','card-header text-bg-primary');
+    headerDivision.innerText = '診断結果';
+
+      //bodyDivisionの作成
+      const bodyDivision = document.createElement('div');
+      bodyDivision.setAttribute('class', 'card-body');
+      const paragraph = document.createElement('p');
+      paragraph.setAttribute('class','card-text');
+      const result =assessment(userName);
+      paragraph.innerText = result;
+      bodyDivision.appendChild(paragraph);
+      //resultDivision add bootstrap
+      resultDivision.setAttribute('class', 'card');
+      //headerDivision とbodyDivisionをresultDivisionに差し込む
+      resultDivision.appendChild(headerDivision);
+      resultDivision.appendChild(bodyDivision);
+
+
 
 
     //ツイートエリアの作成
@@ -39,10 +59,11 @@ assessmentButton.addEventListener(
     tweetDivision.appendChild(script);
 
 
-    const paragraph = document.createElement('p');
-    const result = assessment(userName);  //診断結果を作成
-    paragraph.innerText = result;
-    resultDivision.appendChild(paragraph);
+//テキスト上でいつ消したかわからんやつ 28bodyDivisionの作成と同じ
+    // const paragraph = document.createElement('p');
+    // const result = assessment(userName);  //診断結果を作成
+    // paragraph.innerText = result;
+    // resultDivision.appendChild(paragraph);
 
     console.log(assessment(userName));
 
